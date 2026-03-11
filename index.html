@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>CricPrime Scorer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🏏 CricPrime Scorer</h1>
+
+<div id="setup">
+
+<h2>Match Setup</h2>
+
+<input id="teamA" placeholder="Team A Name" required>
+<input id="teamB" placeholder="Team B Name" required>
+
+<label>Players per team</label>
+<input id="players" type="number">
+
+<label>Overs per innings</label>
+<input id="overs" type="number">
+
+<button onclick="createPlayers()">Add Player Names</button>
+
+<div id="playerArea"></div>
+
+<button onclick="showToss()">Continue to Toss</button>
+
+</div>
+
+
+<div id="tossBox" class="hidden">
+
+<h2>🪙 Toss</h2>
+
+<p id="tossTeams"></p>
+
+<button onclick="toss()">Flip Coin</button>
+
+<p id="tossResult"></p>
+
+<div id="tossDecision" class="hidden">
+
+<h3>Choose Decision</h3>
+
+<button onclick="chooseBat()">Bat</button>
+<button onclick="chooseBowl()">Bowl</button>
+
+</div>
+
+</div>
+
+
+<div id="scoreboard" class="hidden">
+
+<div class="scorebox">
+
+<h2 id="battingTeam"></h2>
+
+<h1 id="score">0 / 0</h1>
+
+<p id="oversDisplay">Overs: 0.0</p>
+
+<p id="target"></p>
+
+</div>
+
+
+<div class="runButtons">
+
+<button onclick="run(0)">0</button>
+<button onclick="run(1)">1</button>
+<button onclick="run(2)">2</button>
+<button onclick="run(3)">3</button>
+<button onclick="run(4)">4</button>
+<button onclick="run(6)">6</button>
+<button class="wicket" onclick="wicket()">W</button>
+
+</div>
+
+
+<div class="controls">
+
+<button onclick="nextInnings()">Start 2nd Innings</button>
+<button onclick="saveMatch()">Save Match</button>
+<button onclick="resetMatch()">Reset Match</button>
+
+</div>
+
+<p id="result"></p>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

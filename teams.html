@@ -1,0 +1,16 @@
+<h1>Teams</h1>
+
+<ul id="teams"></ul>
+
+<script>
+
+let teams=JSON.parse(localStorage.getItem("teams"))||[]
+
+teams.forEach(t=>{
+
+document.getElementById("teams").innerHTML+=
+"<li>"+t.name+"</li>"
+
+})
+
+</script>

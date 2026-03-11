@@ -1,0 +1,18 @@
+<h1>Player Rankings</h1>
+
+<ul id="rank"></ul>
+
+<script>
+
+let players=JSON.parse(localStorage.getItem("playersStats"))||[]
+
+players.sort((a,b)=>b.runs-a.runs)
+
+players.forEach(p=>{
+
+document.getElementById("rank").innerHTML+=
+"<li>"+p.name+" - "+p.runs+" runs</li>"
+
+})
+
+</script>

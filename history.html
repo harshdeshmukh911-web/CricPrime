@@ -1,0 +1,16 @@
+<h1>Match History</h1>
+
+<ul id="history"></ul>
+
+<script>
+
+let matches=JSON.parse(localStorage.getItem("matches"))||[]
+
+matches.forEach(m=>{
+
+document.getElementById("history").innerHTML+=
+"<li>"+m.score+"/"+m.wickets+"</li>"
+
+})
+
+</script>

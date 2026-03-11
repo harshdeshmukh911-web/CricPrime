@@ -1,0 +1,39 @@
+<h1>Create Tournament</h1>
+
+<input id="tname">
+
+<button onclick="create()">Create</button>
+
+<ul id="list"></ul>
+
+<script>
+
+let tournaments=JSON.parse(localStorage.getItem("tournaments"))||[]
+
+function create(){
+
+let name=document.getElementById("tname").value
+
+tournaments.push({name:name})
+
+localStorage.setItem("tournaments",JSON.stringify(tournaments))
+
+show()
+
+}
+
+function show(){
+
+document.getElementById("list").innerHTML=""
+
+tournaments.forEach(t=>{
+
+document.getElementById("list").innerHTML+="<li>"+t.name+"</li>"
+
+})
+
+}
+
+show()
+
+</script>
